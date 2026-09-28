@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_endereco_enderecos",
+  "info": {
+    "displayName": "endereco",
+    "icon": "pinMap"
+  },
+  "options": {},
+  "attributes": {
+    "rua": {
+      "type": "string",
+      "required": true
+    },
+    "bairro": {
+      "type": "string",
+      "required": true
+    },
+    "municipio": {
+      "type": "string",
+      "required": true
+    },
+    "estado": {
+      "type": "string",
+      "required": true
+    },
+    "cep": {
+      "type": "string",
+      "required": true
+    },
+    "numero": {
+      "type": "integer",
+      "required": true
+    },
+    "complemento": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

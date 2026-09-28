@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "empresas",
+  "info": {
+    "singularName": "empresa",
+    "pluralName": "empresas",
+    "displayName": "Empresa"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cnpj": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "nome": {
+      "type": "string",
+      "required": false
+    },
+    "razao_social": {
+      "type": "string",
+      "required": true
+    },
+    "endereco": {
+      "type": "component",
+      "component": "endereco.endereco",
+      "repeatable": false,
+      "required": true
+    },
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "required": true,
+      "mappedBy": "empresa"
+    },
+    "estoques": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::estoque.estoque",
+      "mappedBy": "empresa"
+    },
+    "produtos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::produto.produto",
+      "mappedBy": "empresa"
+    },
+    "categorias": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::categoria.categoria",
+      "mappedBy": "empresa"
+    }
+  }
+}

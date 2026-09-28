@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tipo_movimentacoes",
+  "info": {
+    "singularName": "tipo-movimentacao",
+    "pluralName": "tipo-movimentacoes",
+    "displayName": "Tipo-Movimentacao"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo": {
+      "type": "string",
+      "required": true
+    },
+    "recorrente": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

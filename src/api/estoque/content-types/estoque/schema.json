@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estoques",
+  "info": {
+    "singularName": "estoque",
+    "pluralName": "estoques",
+    "displayName": "Estoque"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "qtd_estoque": {
+      "type": "integer",
+      "required": true
+    },
+    "qtd_minima": {
+      "type": "integer",
+      "default": 5
+    },
+    "qtd_maxima": {
+      "type": "integer"
+    },
+    "empresa": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::empresa.empresa",
+      "inversedBy": "estoques"
+    },
+    "produto": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::produto.produto",
+      "inversedBy": "estoque"
+    }
+  }
+}

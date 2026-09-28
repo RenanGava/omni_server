@@ -12,11 +12,15 @@
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
-    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+    "upgrade:dry": "npx @strapi/upgrade latest --dry",
+    "docker:dev": "docker compose -f docker-compose.dev.yml",
+    "docker:prod": "docker compose -f docker-compose.prod.yml"
   },
   "dependencies": {
+    "@strapi-community/plugin-io": "^5.8.3",
     "@strapi/database": "5.55.1",
     "@strapi/plugin-cloud": "5.55.1",
+    "@strapi/plugin-documentation": "^5.55.1",
     "@strapi/plugin-users-permissions": "5.55.1",
     "@strapi/strapi": "5.55.1",
     "pg": "8.20.0",
