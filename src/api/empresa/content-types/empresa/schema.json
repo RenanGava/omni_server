@@ -54,6 +54,18 @@
       "relation": "oneToMany",
       "target": "api::categoria.categoria",
       "mappedBy": "empresa"
+    },
+    "movimentacaos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::movimentacao.movimentacao",
+      "mappedBy": "empresa"
+    },
+    "orcamentos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::orcamento.orcamento",
+      "mappedBy": "empresa"
     }
   }
 }

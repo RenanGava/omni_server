@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orcamentos",
+  "info": {
+    "singularName": "orcamento",
+    "pluralName": "orcamentos",
+    "displayName": "Orcamento"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "valorTotal": {
+      "type": "integer",
+      "required": true
+    },
+    "total_produtos": {
+      "type": "integer",
+      "required": true
+    },
+    "vendido": {
+      "type": "boolean",
+      "default": false
+    },
+    "movimentacoes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::movimentacao.movimentacao",
+      "mappedBy": "orcamento"
+    },
+    "empresa": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::empresa.empresa",
+      "inversedBy": "orcamentos"
+    }
+  }
+}

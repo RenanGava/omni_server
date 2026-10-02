@@ -15,9 +15,11 @@
       "type": "string",
       "required": true
     },
-    "recorrente": {
-      "type": "boolean",
-      "default": false
+    "movimentacaos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::movimentacao.movimentacao",
+      "mappedBy": "tipo_movimentacao"
     }
   }
 }

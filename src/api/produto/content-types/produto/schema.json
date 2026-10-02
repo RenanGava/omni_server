@@ -51,6 +51,12 @@
       "relation": "manyToOne",
       "target": "api::categoria.categoria",
       "inversedBy": "produtos"
+    },
+    "movimentacao": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::movimentacao.movimentacao",
+      "mappedBy": "produto"
     }
   }
 }

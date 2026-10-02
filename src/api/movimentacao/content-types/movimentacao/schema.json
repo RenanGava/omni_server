@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movimentacoes",
+  "info": {
+    "singularName": "movimentacao",
+    "pluralName": "movimentacoes",
+    "displayName": "Movimentacao"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "qtd_produto": {
+      "type": "integer"
+    },
+    "estoque_anterior": {
+      "type": "integer"
+    },
+    "estoque_posterior": {
+      "type": "integer"
+    },
+    "produto": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::produto.produto",
+      "inversedBy": "movimentacao"
+    },
+    "empresa": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::empresa.empresa",
+      "inversedBy": "movimentacaos"
+    },
+    "tipo_movimentacao": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tipo-movimentacao.tipo-movimentacao",
+      "inversedBy": "movimentacaos"
+    },
+    "orcamento": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::orcamento.orcamento",
+      "inversedBy": "movimentacoes"
+    }
+  }
+}
